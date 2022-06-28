@@ -68,6 +68,8 @@ public class RegisterActivity extends AppCompatActivity {
                 userMap.put("profileImage", "");
                 userMap.put("coverImage", "");
                 userMap.put("bio", "");
+                userMap.put("coverImage", "");
+                userMap.put("bio", "");
 
                 FirebaseDatabase.getInstance().getReference("user").child(userId)
                                 .setValue(userMap).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -75,7 +77,7 @@ public class RegisterActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<Void> task) {
 
                             }
-                        })
+                        });
 
 
                 startActivity(new Intent(getApplicationContext(),MainActivity.class));
