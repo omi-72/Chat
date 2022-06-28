@@ -6,6 +6,7 @@ import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -70,23 +71,24 @@ public class RegisterActivity extends AppCompatActivity {
                 userMap.put("bio", "");
 
                 FirebaseDatabase.getInstance().getReference("user").child(userId)
-                                .setValue(userMap).addOnCompleteListener(new OnCompleteListener<Void>() {
-                            @Override
-                            public void onComplete(@NonNull Task<Void> task) {
+                                .setValue(userMap).addOnCompleteListener(task -> {
+                                    if (task.isSuccessful()){
+                                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                                        finish();
 
-                            }
-                        })
+                                    }else {
+
+                                        Log.i("TAG", "Error: "+task.getException().getLocalizedMessage());
+                                    }
+
+                                });
 
 
-                startActivity(new Intent(getApplicationContext(),MainActivity.class));
-                finish();
+
 
             }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
+        }).addOnFailureListener(e -> {
 
-            }
         });
     }
 }
