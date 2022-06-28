@@ -15,9 +15,9 @@ public class StartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
-        btn_register.setOnClickListener(view ->{
-        startActivity(new Intent(getApplicationContext(), RegisterActivity.class));
-
+        btn_register.setOnClickListener(view -> {
+            startActivity(new Intent(getApplicationContext(),RegisterActivity.class));
         });
+
     }
 }
