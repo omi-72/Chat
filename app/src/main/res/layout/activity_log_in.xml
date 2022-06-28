@@ -60,7 +60,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edt_details"
+                    android:id="@+id/edt_password"
                     android:inputType="textWebPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -79,7 +79,7 @@
                 android:layout_marginTop="32dp"
                 android:text="LogIn Now"
                 android:fontFamily="@font/roboto_bold"
-                android:id="@+id/btn_logInNow"/>
+                android:id="@+id/btn_logIn"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_create_an_account"
