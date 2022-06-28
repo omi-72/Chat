@@ -8,7 +8,7 @@ import android.os.Bundle;
 
 public class StartActivity extends AppCompatActivity {
 
-    AppCompatButton btn_signIn, btn_register;
+    AppCompatButton btn_register, btn_logIn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
