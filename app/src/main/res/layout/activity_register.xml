@@ -94,7 +94,22 @@
                 android:layout_marginTop="32dp"
                 android:text="Register Now"
                 android:fontFamily="@font/roboto_bold"
-                android:id="@+id/btn_addNote"/>
+                android:id="@+id/btn_registerNow"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_create_an_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Create an Account?"
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_bold"
+                android:background="@drawable/btn_deepblue"
+                android:includeFontPadding="false"
+                />
+
 
 
 
