@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.myAccountMenu:
                 Toast.makeText(this, "My Account Clicked", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(),AccountActivity.class));
                 break;
 
         }
