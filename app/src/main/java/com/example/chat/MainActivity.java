@@ -7,6 +7,8 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 
 import com.example.chat.adapter.FragAdapter;
@@ -40,6 +42,17 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.getTabAt(1).setIcon(R.drawable.ic_round_user_page_24);
         tabLayout.getTabAt(2).setIcon(R.drawable.ic_round_chat_24);
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.top_menu,menu);
+
+        return true;
+    }
+
+    
 
     public void SignOut(View view) {
 
