@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.chat.adapter.FragAdapter;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -27,8 +28,13 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setTitle("ChatON");
         setSupportActionBar(toolbar);
 
+        FragAdapter fragAdapter = new FragAdapter(fragmentManager);
+
         viewPager= findViewById(R.id.fragmentViewPager);
         tabLayout=findViewById(R.id.tabLayout);
+
+        viewPager.setAdapter(fragAdapter);
+        tabLayout.setupWithViewPager(viewPager);
     }
 
     public void SignOut(View view) {
