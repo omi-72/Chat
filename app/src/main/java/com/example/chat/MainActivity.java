@@ -1,6 +1,7 @@
 package com.example.chat;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager.widget.ViewPager;
 
@@ -22,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         FragmentManager fragmentManager =getSupportFragmentManager();
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle("ChatON");
+        setSupportActionBar(toolbar);
 
         viewPager= findViewById(R.id.fragmentViewPager);
         tabLayout=findViewById(R.id.tabLayout);
