@@ -1,5 +1,6 @@
 package com.example.chat;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentManager;
@@ -9,7 +10,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.chat.adapter.FragAdapter;
 import com.google.android.material.tabs.TabLayout;
@@ -27,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         FragmentManager fragmentManager =getSupportFragmentManager();
         Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle("ChatON");
+        toolbar.setTitle("");
         setSupportActionBar(toolbar);
 
         FragAdapter fragAdapter = new FragAdapter(fragmentManager);
@@ -52,9 +55,25 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
-    public void SignOut(View view) {
+        switch (item.getItemId()){
+
+            case R.id.logOutMenu:
+                SignOut();
+                break;
+            case R.id.myAccountMenu:
+                Toast.makeText(this, "My Account Clicked", Toast.LENGTH_SHORT).show();
+                break;
+
+        }
+
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    public void SignOut() {
 
         FirebaseAuth firebaseAuth= FirebaseAuth.getInstance();
         firebaseAuth.signOut();

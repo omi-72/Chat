@@ -4,4 +4,31 @@
     android:layout_height="wrap_content"
     android:background="@color/SkyBlue">
 
+    <LinearLayout
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="start"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/lobster"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:includeFontPadding="false"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
+            android:textColor="@color/white"/>
+
+
+    </LinearLayout>
+
 </androidx.appcompat.widget.Toolbar>
