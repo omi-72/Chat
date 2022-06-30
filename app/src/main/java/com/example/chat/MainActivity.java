@@ -1,6 +1,7 @@
 package com.example.chat;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
@@ -19,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        FragmentManager fragmentManager =getSupportFragmentManager();
 
         viewPager= findViewById(R.id.fragmentViewPager);
         tabLayout=findViewById(R.id.tabLayout);
