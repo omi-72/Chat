@@ -35,6 +35,10 @@ public class MainActivity extends AppCompatActivity {
 
         viewPager.setAdapter(fragAdapter);
         tabLayout.setupWithViewPager(viewPager);
+
+        tabLayout.getTabAt(0).setIcon(R.drawable.ic_round_status_24);
+        tabLayout.getTabAt(1).setIcon(R.drawable.ic_round_user_page_24);
+        tabLayout.getTabAt(2).setIcon(R.drawable.ic_round_chat_24);
     }
 
     public void SignOut(View view) {
